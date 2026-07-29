@@ -21,8 +21,8 @@ const proyectos = [
         descripcion: "Landing page diseñada con un enfoque Dark UI para un centro de innovación tecnológica. Utiliza variables nativas de CSS para una paleta de alto contraste y Flexbox para una estructura fluida y adaptativa.",
         imagen: "pagina-urbano.png", 
         tags: ["HTML5", "CSS3 Variables", "Flexbox", "Dark Theme"],
-        demoUrl: "https://tuusuario.github.io/laboratorio-frontend/Hub-Urbano/",
-        codigoUrl: "https://github.com/tuusuario/laboratorio-frontend/tree/main/Hub-Urbano"
+        demoUrl: "https://mrrick17.github.io/Portafolio/Hub-Urbano-Digital",
+        codigoUrl: "https://github.com/mrrick17/Portafolio/tree/main/Hub-Urbano-Digital"
     },
     
     {
@@ -30,8 +30,8 @@ const proyectos = [
         descripcion: "Landing page corporativa desarrollada con un enfoque Mobile First. Destaca por su diseño limpio, navegación adaptativa y la implementación avanzada de CSS Container Queries para la estructura del formulario.",
         imagen: "pagina-cecoarca.png", 
         tags: ["HTML5", "CSS3 Moderno", "Container Queries", "Responsive Design"],
-        demoUrl: "https://tuusuario.github.io/laboratorio-frontend/Cecoarca/",
-        codigoUrl: "https://github.com/tuusuario/laboratorio-frontend/tree/main/Cecoarca"
+        demoUrl: "https://mrrick17.github.io/Portafolio/Cecoarca",
+        codigoUrl: "https://github.com/mrrick17/Portafolio/tree/main/Cecoarca"
     },
     
 ];
