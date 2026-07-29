@@ -31,6 +31,11 @@ body {
     width: 100%;
 }
 
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .header{
     position: sticky;
     top: 0;
@@ -187,7 +192,7 @@ body {
     }
 
     &__subtitle{
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
 
     &__btn{
@@ -197,6 +202,8 @@ body {
         padding: 10px;
         border-radius: 10px;
         transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
 
     }
 
@@ -207,11 +214,14 @@ body {
     }
 
     &__arrow{
+        margin-top: 10px;
+        padding-top: 20px;
         font-size: 2rem;
         position: absolute;
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 10;
     }
 
     
@@ -424,10 +434,13 @@ body {
 
 
 .project-card {
-    min-width: 100%; 
     background-color: #fff;
     display: flex;
     flex-direction: column-reverse;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 
     @include escritorio{
         display: grid;
@@ -562,7 +575,10 @@ body {
 }
 
 .footer{
-    margin-top: 30px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
     &__container{
         background-color: $titulos;
