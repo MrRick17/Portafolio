@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich | Portafolio Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__nombre">RICHARD V.</a>
+
+            <button class="nav__boton" id="boton">
+                ☰
+            </button>
+
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+                <li class="nav__item"><a href="#portafolio" class="nav__link">Portafolio</a></li>
+                <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="hero" id="inicio">
+                <div class="hero__content">
+                    <h1 class="hero__title">Construyo experiencias web que destacan y convierten.</h1>
+                    <p class="hero__subtitle">Desarrollador enfocado en interfaces minimalistas, rendimiento óptimo y estrategias digitales orientadas a resultados.</p>
+                    <a href="#portafolio" class="hero__btn">Ver mis Proyectos</a>
+                    <p class="hero__arrow">↓</p>
+                </div>
+        </section>
+        <section class="about_me fade-in" id="sobre-mi">
+            <h2 class="about_me__title">Sobre mi</h2>
+            <div class="about_me__content">
+                <div class="about_me__text-content">
+                    <p class="about_me__text">¡Hola! Soy desarrollador front-end enfocado en diseñar y construir interfaces digitales de alto impacto, donde la precisión técnica se encuentra con una estética sofisticada. Mi objetivo no es solo picar código, sino transformar ideas de negocio en plataformas fluidas, optimizadas y atractivas que enganchen al usuario desde el primer segundo.</p>
+
+                    <p class="about_me__text">Combino una sólida mentalidad analítica orientada a la arquitectura limpia con un fuerte sentido del diseño interactivo y el marketing digital. Me especializo en crear sistemas estructurados y escalables bajo metodologías modernas, garantizando un rendimiento óptimo en rendimiento web, adaptabilidad móvil y una experiencia de usuario impecable.</p>
+
+                </div>
+                
+                
+
+                <div class="about_me__habilidades">
+
+                    <h4 class="about_me__habilidades-title">Habilidades</h4>
+
+                   <ul class="about_me__list">
+                        <li class="about_me__item">HTML5 Semántico</li>
+                        <li class="about_me__item">CSS3 Moderno</li>
+                        <li class="about_me__item">SCSS (Arquitectura BEM)</li>
+                        <li class="about_me__item">JavaScript (ES6+)</li>
+                        <li class="about_me__item">Diseño Responsivo</li>
+                   </ul>
+                </div>
+                <a href="#contacto" class="about_me__btn">Hablemos</a>
+            </div>            
+        </section>
+
+        <section class="portafolio fade-in" id="portafolio">
+            <div class="portafolio__container">
+                <h2 class="portfolio__title">Portafolio</h2>
+                <p class="portfolio__subtitle">Desliza para ver una selección de mis mejores trabajos.</p>
+
+                <div class="portafolio__carrusel">
+
+                    <div class="portafolio__view">
+                        <div class="portfolio__track" id="track-proyectos">
+                            <article class="project-card">
+                                <div class="project-card__img-container">
+                                    <img src="fondo main.jpg" alt="Proyecto Prueba" class="project-card__img">
+                                </div>
+                                
+                                </div>
+                                
+                                <div class="project-card__info">
+                                    
+                                    <h3 class="project-card__name"></h3>
+                                    <p class="project-card__desc"></p>
+                                    
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contacto fade-in" id="contacto">
+            <div class="contacto__container">
+                <h2 class="contacto__title">Contacto</h2>
+                <h3 class="contacto__subtitle">¿Listo para crear algo increible?</h3>
+                <p class="contacto__text">Ya sea para construir una plataforma digital desde cero o escalar tu presencia web, hablemos de cómo puedo sumar valor a tu próximo proyecto.</p>
+
+                <div class="contacto__content">
+                    <a href="mailto: richardjose.vt@gmail.com" class="contacto__card">
+                        <img src="correo.png" alt="correo" class="contacto__icono">
+                        <h3 class="contacto__name">Email</h3>
+                        <p class="contacto__detalles">Escribeme un correo</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <foooter class="footer fade-in">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2026 Richard. Desarrollado con pasión y código limpio.</p>
+        </div>
+    </foooter>
+
+    <script src="script.js"></script>
+</body>
+</html>
