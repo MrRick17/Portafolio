@@ -37,7 +37,8 @@ body, html {
 }
 
 .header{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
 
@@ -526,6 +527,7 @@ body, html {
     margin: 50px;
 
     &__container{
+        width: 100%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -533,11 +535,12 @@ body, html {
 
     &__title{
         text-align: center;
+        width: 100%;
         font-family: "Oi", sans-serif;
         font-weight: 100;
         font-size: 2.5rem;
         color: $azul;
-        margin: 20px;
+        margin-top: 20px;
     }
 
     &__subtitle{

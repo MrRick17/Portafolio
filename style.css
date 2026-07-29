@@ -20,7 +20,8 @@ body, html {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background-color: rgba(252, 252, 252, 0.9);
@@ -448,17 +449,19 @@ body, html {
   margin: 50px;
 }
 .contacto__container {
+  width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .contacto__title {
   text-align: center;
+  width: 100%;
   font-family: "Oi", sans-serif;
   font-weight: 100;
   font-size: 2.5rem;
   color: #00c2cc;
-  margin: 20px;
+  margin-top: 20px;
 }
 .contacto__subtitle {
   margin: 12px;
