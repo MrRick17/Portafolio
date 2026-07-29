@@ -52,6 +52,7 @@ body, html {
     padding: 20px;
     border-radius: 0px 0px 2px 2px;
     box-shadow: 0px 0px 10px #1A1A1A;
+    margin-bottom: 0;
 
     &__nombre{
         color: $fondo;
@@ -176,15 +177,19 @@ body, html {
         
     background-size: cover;
     background-position: center;
-
+    margin-top: 0;
+    padding-top: 0;
+    
     &__content{
         text-align: center;
         margin: 20px;
+        margin-top:0 ;
         color: #EAEAEA;
+        padding-top: 0;
     }
 
     &__title{
-        margin-bottom: 50px;
+        margin-bottom: 40px;
 
         @include tablet{
             font-size: 3rem;
@@ -192,7 +197,7 @@ body, html {
     }
 
     &__subtitle{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     &__btn{
@@ -315,14 +320,14 @@ body, html {
             text-decoration: none;
             color: #ffffff;
             background-color: $azul;
-            padding: 5px;
+            padding: 7px;
             border-radius: 5px;
             font-size: 1.5rem;
             text-align: center;
             font-weight: bold;
             transition: opacity 0.3s ease;
             margin-top: 50px;
-            width: 50%;
+            width: auto;
             margin-left: auto;
             margin-right: auto;
 
@@ -330,7 +335,7 @@ body, html {
                 margin-top: 10px;
                 padding: 10px;
                 font-size: 1.7rem;
-                width: 15%;
+                width: auto;
             }
             
 
@@ -460,6 +465,8 @@ body, html {
         height: 100%;
         object-fit: cover; 
         border-radius: 5px;
+        display: block;
+        margin: 0 auto;
 
         @include escritorio{
             display: block;
@@ -520,9 +527,12 @@ body, html {
 
     &__container{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__title{
+        text-align: center;
         font-family: "Oi", sans-serif;
         font-weight: 100;
         font-size: 2.5rem;

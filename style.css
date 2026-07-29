@@ -34,6 +34,7 @@ body, html {
   padding: 20px;
   border-radius: 0px 0px 2px 2px;
   box-shadow: 0px 0px 10px #1A1A1A;
+  margin-bottom: 0;
 }
 .nav__nombre {
   color: #FAFAFA;
@@ -137,14 +138,18 @@ body, html {
   background: linear-gradient(to bottom, rgba(255, 242, 242, 0) 90%, #ffffff 100%), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(fondo\ main.jpg);
   background-size: cover;
   background-position: center;
+  margin-top: 0;
+  padding-top: 0;
 }
 .hero__content {
   text-align: center;
   margin: 20px;
+  margin-top: 0;
   color: #EAEAEA;
+  padding-top: 0;
 }
 .hero__title {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -152,7 +157,7 @@ body, html {
   }
 }
 .hero__subtitle {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .hero__btn {
   color: #1A1A1A;
@@ -259,14 +264,14 @@ body, html {
   text-decoration: none;
   color: #ffffff;
   background-color: #00c2cc;
-  padding: 5px;
+  padding: 7px;
   border-radius: 5px;
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
   transition: opacity 0.3s ease;
   margin-top: 50px;
-  width: 50%;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,7 +280,7 @@ body, html {
     margin-top: 10px;
     padding: 10px;
     font-size: 1.7rem;
-    width: 15%;
+    width: auto;
   }
 }
 .about_me__btn:hover {
@@ -386,6 +391,8 @@ body, html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  display: block;
+  margin: 0 auto;
 }
 @media (min-width: 1024px) {
   .project-card__img {
@@ -442,8 +449,11 @@ body, html {
 }
 .contacto__container {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contacto__title {
+  text-align: center;
   font-family: "Oi", sans-serif;
   font-weight: 100;
   font-size: 2.5rem;
