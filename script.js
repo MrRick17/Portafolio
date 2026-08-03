@@ -17,21 +17,12 @@ links.forEach(link => {
 const proyectos = [
 
     {
-        titulo: "Hub Urbano Digital",
-        descripcion: "Landing page diseñada con un enfoque Dark UI para un centro de innovación tecnológica. Utiliza variables nativas de CSS para una paleta de alto contraste y Flexbox para una estructura fluida y adaptativa.",
-        imagen: "pagina-urbano.png", 
-        tags: ["HTML5", "CSS3 Variables", "Flexbox", "Dark Theme"],
-        demoUrl: "https://mrrick17.github.io/Portafolio/Hub-Urbano-Digital",
-        codigoUrl: "https://github.com/mrrick17/Portafolio/tree/main/Hub-Urbano-Digital"
-    },
-    
-    {
-        titulo: "Cecoarca — Web Corporativa",
-        descripcion: "Landing page corporativa desarrollada con un enfoque Mobile First. Destaca por su diseño limpio, navegación adaptativa y la implementación avanzada de CSS Container Queries para la estructura del formulario.",
-        imagen: "pagina-cecoarca.png", 
-        tags: ["HTML5", "CSS3 Moderno", "Container Queries", "Responsive Design"],
-        demoUrl: "https://mrrick17.github.io/Portafolio/Cecoarca",
-        codigoUrl: "https://github.com/mrrick17/Portafolio/tree/main/Cecoarca"
+        titulo: "Sinapis - Experiencia Web Interactiva",
+        descripcion: "Desarrollo frontend de una landing page moderna, construida bajo la metodología Mobile First. El enfoque principal fue crear una interfaz altamente visual y fluida, optimizando los tiempos de carga y asegurando una adaptabilidad perfecta en cualquier dispositivo.",
+        imagen: "SINAPIS.png",
+        tags: ["HTML5", "CSS3", "JavaScript", "Interactividad"],
+        demoUrl: "https://mrrick17.github.io/sinapis-creativo/",
+        codigoUrl: "https://github.com/MrRick17/Portafolio/tree/main/Sinapis%20Creativo"
     },
     
 ];
