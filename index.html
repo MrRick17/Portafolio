@@ -1,130 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rich | Portafolio Web</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    
-
+    <title>Richard V. | Portafolio Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Orbes luminosos de fondo (Gradients abstractos) -->
+    <div class="glow-orb orb-cyan"></div>
+    <div class="glow-orb orb-purple"></div>
+
+    <!-- Header / Navbar Flotante (Glassmorphism) -->
     <header class="header">
-        <nav class="nav">
-            <a href="#" class="nav__nombre">RICHARD V.</a>
-
-            <button class="nav__boton" id="boton">
-                ☰
+        <nav class="nav-pill" id="navbar">
+            <a href="#inicio" class="nav-brand">RICHARD V.</a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="#portafolio" class="nav-link">Portafolio</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
             </button>
-
-            <ul class="nav__menu">
-                <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
-                <li class="nav__item"><a href="#portafolio" class="nav__link">Portafolio</a></li>
-                <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main class="content">
-        <section class="hero" id="inicio">
-                <div class="hero__content">
-                    <h1 class="hero__title">Construyo experiencias web que destacan y convierten.</h1>
-                    <p class="hero__subtitle">Desarrollador enfocado en interfaces minimalistas, rendimiento óptimo y estrategias digitales orientadas a resultados.</p>
-                    <a href="#portafolio" class="hero__btn">Ver mis Proyectos</a>
-                    <p class="hero__arrow">↓</p>
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge">FRONT-END DEVELOPER</span>
+                <h1 class="hero-title">Construyo experiencias web con <span class="gradient-text">impacto visual</span>.</h1>
+                <p class="hero-desc">Desarrollador enfocado en interfaces minimalistas, rendimiento óptimo y estrategias digitales orientadas a resultados.</p>
+                <div class="hero-actions">
+                    <a href="#portafolio" class="btn-primary">Ver mis Proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Hablemos</a>
                 </div>
-        </section>
-        <section class="about_me fade-in" id="sobre-mi">
-            <h2 class="about_me__title">Sobre mi</h2>
-            <div class="about_me__content">
-                <div class="about_me__text-content">
-                    <p class="about_me__text">¡Hola! Soy desarrollador front-end enfocado en diseñar y construir interfaces digitales de alto impacto, donde la precisión técnica se encuentra con una estética sofisticada. Mi objetivo no es solo picar código, sino transformar ideas de negocio en plataformas fluidas, optimizadas y atractivas que enganchen al usuario desde el primer segundo.</p>
-
-                    <p class="about_me__text">Combino una sólida mentalidad analítica orientada a la arquitectura limpia con un fuerte sentido del diseño interactivo y el marketing digital. Me especializo en crear sistemas estructurados y escalables bajo metodologías modernas, garantizando un rendimiento óptimo en rendimiento web, adaptabilidad móvil y una experiencia de usuario impecable.</p>
-
-                </div>
-                
-                
-
-                <div class="about_me__habilidades">
-
-                    <h4 class="about_me__habilidades-title">Habilidades</h4>
-
-                   <ul class="about_me__list">
-                        <li class="about_me__item">HTML5 Semántico</li>
-                        <li class="about_me__item">CSS3 Moderno</li>
-                        <li class="about_me__item">SCSS (Arquitectura BEM)</li>
-                        <li class="about_me__item">JavaScript (ES6+)</li>
-                        <li class="about_me__item">Diseño Responsivo</li>
-                   </ul>
-                </div>
-                <a href="#contacto" class="about_me__btn">Hablemos</a>
-            </div>            
-        </section>
-
-        <section class="portafolio fade-in" id="portafolio">
-            <div class="portafolio__container">
-                <h2 class="portfolio__title">Portafolio</h2>
-                <p class="portfolio__subtitle">Desliza para ver una selección de mis mejores trabajos.</p>
-
-                <div class="portafolio__carrusel">
-
-                    <div class="portafolio__view">
-                        <div class="portfolio__track" id="track-proyectos">
-                            <article class="project-card">
-                                <div class="project-card__img-container">
-                                    <img src="fondo main.jpg" alt="Proyecto Prueba" class="project-card__img">
-                                </div>
-                                
-                                </div>
-                                
-                                <div class="project-card__info">
-                                    
-                                    <h3 class="project-card__name"></h3>
-                                    <p class="project-card__desc"></p>
-                                    
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    
-                </div>
-
             </div>
         </section>
 
-        <section class="contacto fade-in" id="contacto">
-            <div class="contacto__container">
-                <h2 class="contacto__title">Contacto</h2>
-                <h3 class="contacto__subtitle">¿Listo para crear algo increible?</h3>
-                <p class="contacto__text">Ya sea para construir una plataforma digital desde cero o escalar tu presencia web, hablemos de cómo puedo sumar valor a tu próximo proyecto.</p>
+        <!-- SECCIÓN SOBRE MÍ -->
+        <section id="sobre-mi" class="about">
+            <div class="section-container">
+                <h2 class="section-title">Sobre <span class="gradient-text">Mí</span></h2>
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <p>¡Hola! Soy desarrollador front-end enfocado en diseñar y construir interfaces digitales de alto impacto, donde la precisión técnica se encuentra con una estética sofisticada. Mi objetivo no es solo picar código, sino transformar ideas de negocio en plataformas fluidas, optimizadas y atractivas.</p>
+                        <p>Combino una sólida mentalidad analítica orientada a la arquitectura limpia con un fuerte sentido del diseño interactivo y el marketing digital, garantizando un rendimiento óptimo y una experiencia de usuario impecable.</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>Habilidades Clave</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">HTML5 Semántico</span>
+                            <span class="skill-tag">CSS3 Moderno</span>
+                            <span class="skill-tag">SCSS (BEM)</span>
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="contacto__content">
-                    <a href="mailto: richardjose.vt@gmail.com" class="contacto__card">
-                        <img src="correo.png" alt="correo" class="contacto__icono">
-                        <h3 class="contacto__name">Email</h3>
-                        <p class="contacto__detalles">Escribeme un correo</p>
+        <!-- SECCIÓN PORTAFOLIO (Carrusel Premium) -->
+        <section id="portafolio" class="portfolio">
+            <div class="section-container">
+                <h2 class="section-title">Mi <span class="gradient-text">Portafolio</span></h2>
+                <p class="section-subtitle">Explora una selección de mis trabajos más destacados.</p>
+                
+                <div class="portfolio-carousel-wrapper">
+                    <div class="portfolio-track" id="track-proyectos">
+                        <!-- Inyectado dinámicamente mediante script.js -->
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="carousel-btn prev-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next-btn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="contact">
+            <div class="section-container">
+                <div class="contact-box">
+                    <h2 class="section-title">¿Listo para crear algo <span class="gradient-text">increíble</span>?</h2>
+                    <p class="contact-desc">Ya sea para construir una plataforma digital desde cero o escalar tu presencia web, hablemos de cómo puedo sumar valor a tu próximo proyecto.</p>
+                    <a href="mailto:richardjose.vt@gmail.com" class="contact-card-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>richardjose.vt@gmail.com</span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <foooter class="footer fade-in">
-        <div class="footer__container">
-            <p class="footer__text">&copy; 2026 Richard. Desarrollado con pasión y código limpio.</p>
-        </div>
-    </foooter>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Richard V. Desarrollado con pasión y código limpio.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

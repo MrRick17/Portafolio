@@ -1,136 +1,111 @@
-const menu = document.querySelector(".nav__menu");
-const boton = document.querySelector(".nav__boton");
-const links = document.querySelectorAll(".nav__link");
+document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const navbar = document.getElementById("navbar");
 
-boton.addEventListener("click", () => {
-    menu.classList.toggle("nav__menu--activo");
-})
+    // 1. Control del menú desplegable en dispositivos móviles
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("nav__menu--activo");
-    });
-});
-
-
-// 1. BASE DE DATOS DE PROYECTOS (Tus 4 joyas)
-const proyectos = [
-
-    {
-        titulo: "Sinapis - Experiencia Web Interactiva",
-        descripcion: "Desarrollo frontend de una landing page moderna, construida bajo la metodología Mobile First. El enfoque principal fue crear una interfaz altamente visual y fluida, optimizando los tiempos de carga y asegurando una adaptabilidad perfecta en cualquier dispositivo.",
-        imagen: "SINAPIS.png",
-        tags: ["HTML5", "CSS3", "JavaScript", "Interactividad"],
-        demoUrl: "https://mrrick17.github.io/sinapis-creativo/",
-        codigoUrl: "https://github.com/MrRick17/Portafolio/tree/main/Sinapis%20Creativo"
-    },
-    
-];
-
-// 2. ELEMENTOS DEL DOM
-const trackProyectos = document.getElementById('track-proyectos');
-let indiceActual = 0;
-
-// 3. FUNCIÓN PARA DIBUJAR LOS PROYECTOS
-function cargarProyectos() {
-    if (!trackProyectos) return;
-
-    trackProyectos.innerHTML = ''; // Limpia todo para que no se dupliquen
-
-    proyectos.forEach(proyecto => {
-        // Generar etiquetas
-        const tagsHTML = proyecto.tags
-            .map(tag => `<span class="project-card__tag">${tag}</span>`)
-            .join('');
-
-        // Crear la tarjeta con las flechas adentro
-        const tarjetaHTML = `
-            <article class="project-card">
-                
-                <div class="project-card__info">
-                    <div class="project-card__tags">${tagsHTML}</div>
-                    <h3 class="project-card__name">${proyecto.titulo}</h3>
-                    <p class="project-card__desc">${proyecto.descripcion}</p>
-                    <div class="project-card__links">
-                        <a href="${proyecto.demoUrl}" target="_blank" rel="noopener" class="project-card__link project-card__link--primary">Ver Proyecto</a>
-                        <a href="${proyecto.codigoUrl}" target="_blank" rel="noopener" class="project-card__link">Código</a>
-                    </div>
-                </div>
-
-                <div class="project-card__visual">
-                    <div class="project-card__img-container">
-                        <img src="${proyecto.imagen}" alt="${proyecto.titulo}" class="project-card__img">
-                    </div>
-                    
-                    <div class="portfolio__navigation">
-                        <button class="portfolio__arrow portfolio__arrow--left" aria-label="Anterior">&#10094;</button>
-                        <button class="portfolio__arrow portfolio__arrow--right" aria-label="Siguiente">&#10095;</button>
-                    </div>
-                </div>
-
-            </article>
-        `;
-        trackProyectos.innerHTML += tarjetaHTML;
-    });
-}
-
-
-function moverCarrusel() {
-    if (!trackProyectos) return;
-    const desplazamiento = -indiceActual * 100;
-    trackProyectos.style.transform = `translateX(${desplazamiento}%)`;
-}
-
-
-document.addEventListener('click', (e) => {
-    
-    // Si toca CUALQUIER flecha derecha
-    if (e.target.closest('.portfolio__arrow--right')) {
-        if (indiceActual < proyectos.length - 1) {
-            indiceActual++;
-        } else {
-            indiceActual = 0;
-        }
-        moverCarrusel();
+        // Ocultar el menú al hacer clic en cualquier enlace de navegación
+        document.querySelectorAll(".nav-link").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+            });
+        });
     }
-    
-    
-    if (e.target.closest('.portfolio__arrow--left')) {
-        if (indiceActual > 0) {
-            indiceActual--;
+
+    // 2. Comportamiento dinámico de la barra al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
         } else {
-            indiceActual = proyectos.length - 1;
-        }
-        moverCarrusel();
-    }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', cargarProyectos);
-
-// --- EL VIGILANTE DE SCROLL (Intersection Observer) ---
-const observadorScroll = new IntersectionObserver((entradas) => {
-    entradas.forEach(entrada => {
-        // Si el elemento entra en la pantalla...
-        if (entrada.isIntersecting) {
-            entrada.target.classList.add('aparecer');
-            
-            // Opcional: Descomenta la siguiente línea si quieres que 
-            // la animación ocurra SOLO UNA VEZ y no cada vez que subas y bajes.
-            // observadorScroll.unobserve(entrada.target);
+            navbar.classList.remove("scrolled");
         }
     });
-}, {
-    rootMargin: '0px',
-    threshold: 0.15 // Se activa cuando al menos el 15% del elemento es visible
+
+    // 3. Base de datos de proyectos
+    const proyectos = [
+
+        {
+            titulo: "My Past Art",
+            descripcion: "Sitio web modernizado para la marca My Past Art, con un enfoque en la experiencia del usuario y la presentación de productos de manera atractiva.",
+            imagen: "past.png",
+            tags: ["Estrategia Digital", "Responsive", "CSS Moderno"],
+            demoUrl: "https://my-past-my-art.vercel.app/"
+        },
+        {
+            titulo: "Sinapis - Experiencia Web Interactiva",
+            descripcion: "Landing page moderna construida bajo Mobile First. Interfaz altamente visual y fluida, optimizada para tiempos de carga rápidos[cite: 20].",
+            imagen: "SINAPIS.png",
+            tags: ["HTML5", "CSS3", "JavaScript"],
+            demoUrl: "https://mrrick17.github.io/sinapis-creativo/"
+        },
+        {
+            titulo: "KTSU",
+            descripcion: "Sitio web modernizado para la marca KTSU, con un enfoque en la experiencia del usuario y la presentación de productos de manera atractiva.",
+            imagen: "ktsu.png",
+            tags: ["Diseño Web", "UI/UX", "Frontend"],
+            demoUrl: "https://ktsu.vercel.app/"
+        },
+        
+        {
+            titulo: "The Purple Pig",
+            descripcion: "Sitio web modernizado para la marca The Purple Pig, con un enfoque en la experiencia del usuario y la presentación de productos de manera atractiva.",
+            imagen: "pig.png",
+            tags: ["Institucional", "Arquitectura Web", "UX"],
+            demoUrl: "https://the-purple-pig.vercel.app/"
+        }
+    ];
+
+    // 4. Lógica del Carrusel Premium
+    const trackProyectos = document.getElementById('track-proyectos');
+    let indiceActual = 0;
+
+    function cargarProyectos() {
+        if (!trackProyectos) return;
+        trackProyectos.innerHTML = '';
+
+        proyectos.forEach(proyecto => {
+            const tagsHTML = proyecto.tags
+                .map(tag => `<span>${tag}</span>`)
+                .join('');
+
+            const tarjetaHTML = `
+                <article class="project-card">
+                    <div class="project-img-container">
+                        <img src="${proyecto.imagen}" alt="${proyecto.titulo}">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">${tagsHTML}</div>
+                        <h3>${proyecto.titulo}</h3>
+                        <p>${proyecto.descripcion}</p>
+                        <a href="${proyecto.demoUrl}" target="_blank" rel="noopener" class="btn-project">Ver Página en Vivo</a>
+                    </div>
+                </article>
+            `;
+            trackProyectos.innerHTML += tarjetaHTML;
+        });
+    }
+
+    function moverCarrusel() {
+        if (!trackProyectos) return;
+        const desplazamiento = -indiceActual * 100;
+        trackProyectos.style.transform = `translateX(${desplazamiento}%)`;
+    }
+
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.next-btn')) {
+            indiceActual = (indiceActual < proyectos.length - 1) ? indiceActual + 1 : 0;
+            moverCarrusel();
+        }
+        if (e.target.closest('.prev-btn')) {
+            indiceActual = (indiceActual > 0) ? indiceActual - 1 : proyectos.length - 1;
+            moverCarrusel();
+        }
+    });
+
+    cargarProyectos();
 });
-
-// Función para activar el vigilante en los elementos estáticos (como el footer o títulos)
-function activarAnimaciones() {
-    const elementosOcultos = document.querySelectorAll('.fade-in');
-    elementosOcultos.forEach(el => observadorScroll.observe(el));
-}
-
-// Lo iniciamos al cargar la página
-document.addEventListener('DOMContentLoaded', activarAnimaciones);
